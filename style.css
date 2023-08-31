@@ -10,24 +10,19 @@ html {
     width: 100%;
 }
 
+body {
+    font-size: 1.05rem;
+    color: #111;
+}
+
 .title {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
-    color: rgb(0, 92, 173);
-    margin: .5em;
+    color: #005096;
+    font-weight: 500;
+    margin: .5em 0;
     line-height: 1.2;
-}
-
-@media (max-width: 500px) {
-    .title {
-        font-size: 2rem
-    }
-}
-
-@media (max-width: 400px) {
-    .title {
-        font-size: 1.75rem
-    }
+    font-size: 1.25rem;
 }
 
 h2 {
@@ -35,30 +30,46 @@ h2 {
     line-height: .8;
 }
 
+header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+    /* position: fixed; */
+    background-color: #fff;
+    z-index: 2;
+}
+
+.main {
+    background-color: #005096;
+}
+
 .nav {
     display: flex;
-    justify-content: space-around;
-    max-width: 1300px;
+    justify-content: space-between;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .nav__img {
-    max-height: 100px;
-    margin: .5em 2em 0;
+    max-height: 50px;
+    margin: .5em 0 .25em;
 }
 
-.main {
+.members {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    margin: 1em 1em 2em;
+    padding-bottom: 5em;
 }
 
-.members {
+.members__card {
     min-width: 250px;
     margin: 1em;
+    background: rgb(183,211,221);
+    background: linear-gradient(-90deg, rgba(183,211,221,1) 29%, rgba(111,188,200,1) 100%);
 }
 
 h2 a {
@@ -71,13 +82,114 @@ h2 a {
 }
 
 footer {
-    background-color: #c9e5ef;
+    background-color: #1e2f37;
+    color: #eee;
 }
 
-@media (min-width: 650px) and (min-height: 900px) {
+@media (min-height: 1500px) {
     footer {
         position: absolute;
         bottom: 0;
         width: 100%;
     }
+}
+
+/* Pricing Section */
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+li {
+    margin-block: .5em;
+    padding-inline: 1em;
+}
+
+.section__title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fff;
+    text-align: center;
+    padding-block: 2em 1em;
+}
+
+.section__subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+    margin-block: 1em;
+    color: #eee;
+    margin-bottom: 0;
+}
+
+.pricing {
+    padding-inline: 1em;
+    max-width: 1050px;
+    margin-inline: auto;
+}
+
+.pricing__plans {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.pricing__plan--title {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.pricing__plan--description {
+    font-style: italic;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.pricing__plan--starter,
+.pricing__plan--business,
+.pricing__plan--premium {
+    max-width: 300px;
+    margin: 0 auto 2em;
+}
+
+.pricing__plan--starter {
+    background: rgb(207,236,211);
+    background: radial-gradient(circle, rgba(207,236,211,1) 29%, rgba(135,188,129,1) 100%);
+}
+
+.pricing__plan--business {
+    background: rgb(236,221,162);
+    background: radial-gradient(circle, rgba(236,221,162,1) 29%, rgba(195,167,16,1) 100%);
+}
+
+.pricing__plan--premium {
+    background: rgb(202,184,210);
+    background: radial-gradient(circle, rgba(202,184,210,1) 29%, rgba(178,125,198,1) 100%);
+}
+
+.recommended {
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(146, 24, 0);
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: .4em;
+}
+  
+::-webkit-scrollbar-track {
+    background: #005096;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #999;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #999999b0;
 }
